@@ -3,36 +3,27 @@ import "./time.css";
 
 const Time = () => {
 
-    // let seconds;
+    
     const [displayTime, setDisplayTime] = useState({ year: 0, seconds: 0 });
-    // let currentTime = new Date().toString();
 
     function translateWeekday(weekday) {
         switch (new Date().getDay()) {
             case 0:
-                weekday = "Mon";
-                break;
+                return "Sun";
             case 1:
-                weekday = "Tue";
-                break;
+                return "Mon";
             case 2:
-                weekday = "Wed";
-                break;
+                return "Tue";
             case 3:
-                weekday = "Thu";
-                break; 
+                return "Wed";
             case 4:
-                weekday = "Fri";
-                break;
+                return "Thu";
             case 5:
-                weekday = "Sat";
-                break;
+                return "Fri";
             case 6:
-                weekday = "Sun";
-                break;           
+                return "Sat";      
             default:
-                weekday = " ";
-                break;
+                return " ";
         }
     }
 
@@ -49,14 +40,13 @@ const Time = () => {
         });
         // --------------------------------
         
-        console.log("time: " + JSON.stringify({
-            year: time.getFullYear(),
-            seconds: time.getSeconds()
+        console.log(JSON.stringify({
+            // year: time.getFullYear(),
+            weekday: translateWeekday(time.getDay()),
+            // seconds: time.getSeconds()
         }))
         // --------------------------------
     };
-
-    // const [ displayTime, setDisplayTime] = useState(currentTime);
     
 
     useEffect(() => {
@@ -67,11 +57,9 @@ const Time = () => {
 
     return (
         <div>
+            <p>Year: {displayTime.year}</p>
             <p>Seconds in time: {displayTime.seconds}</p>
 
-            {/* <button onClick={() => setDisplaySeconds(new Date().toString())}>
-                check time
-            </button> */}
         </div>
     )
 };
