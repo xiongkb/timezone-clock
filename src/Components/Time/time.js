@@ -64,21 +64,12 @@ const Time = () => {
         
         setDisplayTime({
             year: time.getFullYear(),
-            month: translateWeekday(time.getMonth()),
+            month: translateMonth(time.getMonth()),
             hour: time.getHours(),
             minutes: time.getMinutes(),
             weekday: translateWeekday(time.getDay()),
             seconds: time.getSeconds()
         });
-        // --------------------------------
-        
-        console.log(JSON.stringify({
-            // year: time.getFullYear(),
-            // weekday: translateWeekday(time.getDay()),
-            weekday: translateMonth(time.getMonth()),
-            // seconds: time.getSeconds()
-        }))
-        // --------------------------------
     };
     
 
@@ -90,8 +81,15 @@ const Time = () => {
 
     return (
         <div>
-            <p>Year: {displayTime.year}</p>
-            <p>Seconds in time: {displayTime.seconds}</p>
+            <div>
+                {displayTime.month} {displayTime.year}
+            </div>
+            <div>
+                {displayTime.weekday}
+            </div>
+            <div>
+                {displayTime.hour}:{displayTime.minutes} <span>{displayTime.seconds}</span>
+            </div>
 
         </div>
     )
