@@ -59,17 +59,23 @@ const Time = () => {
         }
     }
 
+    function leadingZero(num) {
+        return num.toString().padStart(2, "0")
+    }
+
+
     function runTime() { 
         let time = new Date();
         
         setDisplayTime({
             year: time.getFullYear(),
             month: translateMonth(time.getMonth()),
-            hour: time.getHours(),
-            minutes: time.getMinutes(),
+            hour: leadingZero(time.getHours()),
+            minutes: leadingZero(time.getMinutes()),
             weekday: translateWeekday(time.getDay()),
-            seconds: time.getSeconds()
+            seconds: leadingZero(time.getSeconds()),
         });
+        // time.getSeconds() < 10 ? ("0" + time.getSeconds()) : time.getSeconds()
     };
     
 
