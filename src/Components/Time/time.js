@@ -59,6 +59,7 @@ const Time = () => {
         }
     }
 
+    // adding 0s to numbers less than 10
     function leadingZero(num) {
         return num < 10 ? ("0" + num) : num;
     }
@@ -70,12 +71,12 @@ const Time = () => {
         setDisplayTime({
             year: time.getFullYear(),
             month: translateMonth(time.getMonth()),
+            day: time.getDate(),
             hour: time.getHours(),
             minutes: time.getMinutes(),
             weekday: translateWeekday(time.getDay()),
             seconds: time.getSeconds(),
         });
-        // time.getSeconds() < 10 ? ("0" + time.getSeconds()) : time.getSeconds()
     };
     
 
@@ -86,17 +87,19 @@ const Time = () => {
     }, [])
 
     return (
-        <div>
-            <div>
-                {displayTime.month} {displayTime.year}
+        <div className="local-time">
+            <div className="local-month-year">
+                {displayTime.month} {displayTime.day} {displayTime.year}
             </div>
-            <div>
+            <div className="local-weekday">
                 {displayTime.weekday}
             </div>
-            <div>
+
+            {/* having time display 0s here instead of object */}
+            <div className="local-hour-minutes">
                 {leadingZero(displayTime.hour)}:
                 {leadingZero(displayTime.minutes)}
-                <span className="seconds"> {leadingZero(displayTime.seconds)}</span>
+                <span className="local-seconds"> {leadingZero(displayTime.seconds)}</span>
             </div>
 
         </div>
