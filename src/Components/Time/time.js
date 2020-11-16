@@ -60,7 +60,7 @@ const Time = () => {
     }
 
     function leadingZero(num) {
-        return num.toString().padStart(2, "0")
+        return num < 10 ? ("0" + num) : num;
     }
 
 
@@ -70,10 +70,10 @@ const Time = () => {
         setDisplayTime({
             year: time.getFullYear(),
             month: translateMonth(time.getMonth()),
-            hour: leadingZero(time.getHours()),
-            minutes: leadingZero(time.getMinutes()),
+            hour: time.getHours(),
+            minutes: time.getMinutes(),
             weekday: translateWeekday(time.getDay()),
-            seconds: leadingZero(time.getSeconds()),
+            seconds: time.getSeconds(),
         });
         // time.getSeconds() < 10 ? ("0" + time.getSeconds()) : time.getSeconds()
     };
@@ -94,7 +94,9 @@ const Time = () => {
                 {displayTime.weekday}
             </div>
             <div>
-                {displayTime.hour}:{displayTime.minutes} <span>{displayTime.seconds}</span>
+                {leadingZero(displayTime.hour)}:
+                {leadingZero(displayTime.minutes)}
+                <span className="seconds"> {leadingZero(displayTime.seconds)}</span>
             </div>
 
         </div>
