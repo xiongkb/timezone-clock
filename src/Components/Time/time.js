@@ -91,6 +91,9 @@ const Time = () => {
             <div className="local-month-year">
                 {displayTime.month} {displayTime.day} {displayTime.year}
             </div>
+            <div className="time-location">
+                local time
+            </div>
             <div className="local-weekday">
                 {displayTime.weekday}
             </div>
