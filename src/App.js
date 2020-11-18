@@ -1,11 +1,12 @@
 import React from "react";
 import './App.css';
 import Time from "./Components/Time/time"
+import Navbar from "./Components/Navbar/navbar"
 
 function App() {
   return (
     <div className="App">
-      <h1 className="app-title">Time Station</h1>
+      <Navbar />
       <Time />
     </div>
   );
