@@ -24,9 +24,18 @@
     transform: rotate(0deg);
     transition: transform 1s;
 }
-.add-tz:hover {
+.add-tz-btn:hover {
     cursor: pointer;
+}
+.add-tz-btn:focus, .close-tz-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 5px rgba(255, 69, 0, 0.4);
+}
+.close-tz-btn {
+    justify-content: space-around;
 }
 .search-bar {
     margin-right: 10px;
+    width: 500px;
+    height: 30px;
 }
