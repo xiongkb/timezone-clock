@@ -4,8 +4,14 @@ import "./navbar.css";
 const Navbar = () => {
     const [searchState, setSearchState] = useState('close');
 
-    function userSearch() {
-
+    function openSearch() {
+        console.log("clicked")
+        let btn = document.getElementsByClassName("add-tz-btn");
+        console.log(btn);
+        btn[0].style.transform = 'rotate(90deg)';
+        setTimeout(() => setSearchState("open"), 3000)
+        
+        
     }
 
     return (
@@ -14,9 +20,9 @@ const Navbar = () => {
             {searchState === 'open' ?
                 <div>
                     <input className="search-bar" placeholder="Enter a timezone"></input>
-                    <button className="add-tz" onClick={() => setSearchState("close")}>-</button>
+                    <button className="close-tz-btn" onClick={() => setSearchState("close")}>-</button>
                 </div> :
-                <button className="add-tz" onClick={() => setSearchState("open")}>+</button>
+                <button className="add-tz-btn" onClick={() => {openSearch() }}>+</button>
             }
         </div>
     )
