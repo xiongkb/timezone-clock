@@ -5,12 +5,16 @@ import "./tz.css"
 const moment = require("moment-timezone");
 
 const Timezones = () => {
-    
+    let laTime = moment().tz("America/Los_Angeles").format();
+    console.log(moment.tz.zonesForCountry("US"))
+
     return (
         <div>
-            <div>
-                Timezone Name:
-            </div>
+            <div>Timezone Name: {laTime}</div>
+            <div>Timezone date?:</div>
+            <div>Timezone hour:</div>
+            <div>Timezone minute:</div>
+            <div>Timezone second:</div>
         </div>
     )
 }
