@@ -3,9 +3,9 @@ import "./navbar.css";
 
 const Navbar = () => {
     return (
-        <div>
+        <div className="navBar">
             <h1 className="app-title">Time Station</h1>
-            <button>Current Supporting Timezones</button>
+            <button className="add-tz">+</button>
         </div>
     )
 }

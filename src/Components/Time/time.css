@@ -7,6 +7,9 @@
     width: 10%;
     height: auto;
     transition: transform .2s;
+    float: left;
+    margin-left: 50px;
+    margin-top: 50px;
 }
 .local-time:hover {
     transform: scale(1.5);
