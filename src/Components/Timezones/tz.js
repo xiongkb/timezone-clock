@@ -6,7 +6,9 @@ const moment = require("moment-timezone");
 
 const Timezones = () => {
     let laTime = moment().tz("America/Los_Angeles").format();
+
     console.log(moment.tz.zonesForCountry("US"))
+    console.log(moment.tz.countries())
 
     return (
         <div>
