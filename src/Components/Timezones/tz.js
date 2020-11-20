@@ -5,12 +5,14 @@ import "./tz.css"
 const moment = require("moment-timezone");
 
 const Timezones = () => {
-    let tzName = moment().tz.Zone;
-    let tzDate = moment().tz("America/Los_Angeles").format("MM DD YYYY")
-    let tzHour = moment().tz("America/Los_Angeles").format("HH");
-    let tzMinute = moment().tz("America/Los_Angeles").format("mm");
+    let timezone = moment().tz("America/Chicago");
+    let tzName = timezone._z.name;
+    let tzDate = timezone.format("MM DD YYYY")
+    let tzHour = timezone.format("HH");
+    let tzMinute = timezone.format("mm");
 
     console.log(moment.tz.zonesForCountry("US"))
+    console.log(timezone)
 
 
 
@@ -18,6 +20,7 @@ const Timezones = () => {
         <div>
             <div>Timezone Name: {tzName}</div>
             <div>Timezone date?:{tzDate}</div>
+            <div>Timezone weekday:{tzDate}</div>
             <div>Timezone hour:{tzHour}</div>
             <div>Timezone minute:{tzMinute}</div>
         </div>
