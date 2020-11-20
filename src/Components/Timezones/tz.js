@@ -16,12 +16,12 @@ const Timezones = () => {
     console.log(moment.tz.zonesForCountry("US"))
 
     return (
-        <div>
-            <div>{tzDate}</div>
-            <div>{tzName}</div>
-            <div>{tzWeekDay}</div>
+        <div className="tz-time">
+            <div className="tz-month-year">{tzDate}</div>
+            <div className="tz-location">{tzName}</div>
+            <div className="tz-weekday">{tzWeekDay}</div>
             <div>
-                {tzHour}:{tzMinute} <span>{tzSeconds}</span>
+                {tzHour}:{tzMinute} <span className="tz-seconds">{tzSeconds}</span>
             </div>
         </div>
     )

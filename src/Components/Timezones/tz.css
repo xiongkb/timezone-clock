@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+.tz-time {
+    border: 5px #800000 dotted;
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+    height: auto;
+    transition: transform .2s;
+    float: left;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+.tz-time:hover {
+    transform: scale(1.5);
+}
+.tz-month-year {
+    font-size: 14px;
+    color: #ccc;
+}
+.tz-weekday {
+    font-family: 'Monoton', cursive;
+    font-size: 38px;
+    color: #ffa500;
+}
+.tz-seconds {
+    font-size: 18px;
+}
+.tz-location {
+    font-size: 24px;
+}
