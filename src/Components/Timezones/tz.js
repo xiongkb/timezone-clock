@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./tz.css"
 
 // importing momentjs
 const moment = require("moment-timezone");
 
-const Timezones = () => {
+const Timezones = (props) => {
+    useEffect(() => console.log(props.timezones))
     let timezone = moment().tz("America/Chicago");
     let tzName = timezone._z.name;
     let splitName = tzName.split("/");

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./navbar.css";
 
-const Navbar = () => {
+const Navbar = (props) => {
     const [searchState, setSearchState] = useState('close');
 
     function btnRotation() {
@@ -26,7 +26,10 @@ const Navbar = () => {
             <h1 className="app-title">Time Station</h1>
             {searchState === 'open' ?
                 <div>
-                    <input className="search-bar" placeholder="ex: America/Los-Angeles"></input>
+                    <input 
+                        className="search-bar" 
+                        placeholder="ex: America/Los-Angeles" 
+                        onChange={e => props.addTZ(e.target.value)}></input>
                     <button className="close-tz-btn" onClick={() => btnRotationClose()}> - </button>
                 </div> :
                 <button className="add-tz-btn" onClick={() => btnRotation()}>+</button>
