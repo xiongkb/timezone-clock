@@ -5,7 +5,14 @@ import "./tz.css"
 const moment = require("moment-timezone");
 
 const Timezones = (props) => {
-    useEffect(() => console.log(props.timezones))
+    useEffect(() => {
+        console.log(props.timezones)
+        props.timezones.forEach(tz => {
+            if (tz.includes('hello')) {
+                console.log(tz)
+            }
+        })
+    })
     let timezone = moment().tz("America/Chicago");
     let tzName = timezone._z.name;
     let splitName = tzName.split("/");
@@ -17,7 +24,7 @@ const Timezones = (props) => {
     let tzMinute = timezone.format("mm");
     let tzSeconds = timezone.format("ss");
 
-    // console.log(moment.tz.zonesForCountry("US"))
+    console.log(moment.tz.zonesForCountry("US"))
     console.log(tzCountry + " " + tzMajorCity)
 
     return (
