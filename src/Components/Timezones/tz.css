@@ -4,7 +4,7 @@
     border: 5px #800000 dotted;
     border-radius: 10px;
     padding: 10px;
-    width: 200px;
+    width: 150px;
     height: auto;
     transition: transform .2s;
     float: left;
@@ -26,6 +26,11 @@
 .tz-seconds {
     font-size: 18px;
 }
-.tz-location {
-    font-size: 24px;
+.tz-country {
+    font-family: 'Monoton', cursive;
+    font-size: 18px;
+    color: #ffa500;
+}
+.tz-major-city {
+    font-size: 24px
 }
