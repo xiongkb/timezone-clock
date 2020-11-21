@@ -82,7 +82,7 @@ const Time = () => {
 
     useEffect(() => {
         runTime();
-         setInterval(runTime, 1000);
+        setInterval(runTime, 1000);
         
     }, [])
 
