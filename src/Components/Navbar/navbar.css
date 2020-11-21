@@ -9,7 +9,6 @@
 .app-title {
     display: inline-block;
     width: 400px;
-    margin-left: 30px;
 }
 .add-tz-btn, .close-tz-btn {
     display: inline-block;
@@ -38,4 +37,9 @@
     margin-right: 10px;
     width: 500px;
     height: 30px;
+}
+.clock-logo {
+    width: 80px;
+    margin-left: 50px;
+    margin-right: 10px;
 }
