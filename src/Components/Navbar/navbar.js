@@ -1,9 +1,10 @@
 import React from "react";
 import "./navbar.css";
-import logo from "./logo.png"
+import logo from "./logo.png";
 
 const Navbar = (props) => {
 
+    
     // rendering items
     return (
         <div className="navBar">

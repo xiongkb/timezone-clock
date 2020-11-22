@@ -3,7 +3,14 @@ import "./time.css";
 
 const Time = () => {
     
-    const [displayTime, setDisplayTime] = useState({ year: 0, seconds: 0 });
+    const [displayTime, setDisplayTime] = useState({ 
+        year: 0, 
+        month: 0,
+        day: 0,
+        hour: 0,
+        minute: 0,
+        weekday: 0,
+        seconds: 0 });
 
     // weekday
     function translateWeekday(weekday) {
@@ -83,7 +90,6 @@ const Time = () => {
     useEffect(() => {
         runTime();
         setInterval(runTime, 1000);
-        
     }, [])
 
     return (

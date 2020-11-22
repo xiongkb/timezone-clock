@@ -7,20 +7,25 @@ const moment = require("moment-timezone");
 const Timezones = (props) => {
 
     const [displayTZtime, setDisplayTZtime] = useState({
+        tzCountry: 0,
+        tzMajorCity: 0,
+        tzDate: 0,
         tzYear: 0,
         tzHour: 0,
         tzMinute: 0,
         tzSeconds: 0});
 
-    useEffect(() => {
-        console.log(props.timezones)
-        props.timezones.forEach(tz => {
-            if (tz.includes('hello')) {
-                console.log(tz)
-            }
-        })
-    })
+    // useEffect(() => {
+    //     console.log(props.timezones)
+    //     props.timezones.forEach(tz => {
+    //         if (tz.includes('hello')) {
+    //             console.log(tz)
+    //         };
+    //     });
+    // });
     
+    
+    // -------- running TZ time to be more dynamic --------
     function runTZtime() {
         let timezone = moment().tz("America/Chicago");
         let tzName = timezone._z.name;
@@ -34,10 +39,8 @@ const Timezones = (props) => {
             tzHour : timezone.format("HH"),
             tzMinute : timezone.format("mm"),
             tzSeconds : timezone.format("ss"),
-        })
-        console.log(moment.tz.zonesForCountry("US"))
-        console.log(timezone)
-    }
+        });
+    };
 
     useEffect(() => {
         runTZtime();
@@ -55,7 +58,7 @@ const Timezones = (props) => {
                 <span className="tz-seconds"> {displayTZtime.tzSeconds}</span>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Timezones;
