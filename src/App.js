@@ -8,13 +8,16 @@ const moment = require("moment-timezone");
 
 function App() {
 
-  const [timezones, setTimezones] = useState([]);
+  const tzList = moment.tz.names();
+  const [timezones, setTimezones] = useState("");
 
-  let tzList = moment.tz.names();;
-  console.log(tzList)
+  useEffect(() => {
+    console.log(timezones);
+  }, [timezones]);
+
   return (
     <div className="App">
-      <Navbar addTZ={tz => setTimezones([...timezones, tz])}/>
+      <Navbar addTZ={tz => setTimezones(tz)}/>
       <Time />
       <Timezones timezones={timezones} />
     </div>
