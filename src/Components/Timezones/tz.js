@@ -15,16 +15,6 @@ const Timezones = (props) => {
         tzMinute: 0,
         tzSeconds: 0});
 
-    // useEffect(() => {
-    //     console.log(props.timezones)
-    //     props.timezones.forEach(tz => {
-    //         if (tz.includes('hello')) {
-    //             console.log(tz)
-    //         };
-    //     });
-    // });
-    
-    
     // -------- running TZ time to be more dynamic --------
     function runTZtime() {
         let timezone = moment().tz("America/Chicago");

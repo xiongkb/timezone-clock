@@ -7,10 +7,13 @@ import Timezones from "./Components/Timezones/tz";
 const moment = require("moment-timezone");
 
 function App() {
-
+  
   const tzList = moment.tz.names();
   const [timezones, setTimezones] = useState("");
 
+  let filteredTZList = [];
+  console.log(tzList.filter(tz => tz.toLowerCase().includes(timezones.toLowerCase())))
+  // user input will be saved to timezones
   useEffect(() => {
     console.log(timezones);
   }, [timezones]);

@@ -15,7 +15,7 @@ const Navbar = (props) => {
             <input 
                 className="search-bar" 
                 placeholder="ex: America/Los-Angeles" 
-                onChange={e => props.addTZ(e.target.value)}>
+                onChange={e => props.addTZ(e.target.value.toLocaleLowerCase())}>
             </input>
             <button className="add-tz-btn">+</button>
             
