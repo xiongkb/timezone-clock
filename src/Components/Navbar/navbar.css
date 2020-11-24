@@ -43,3 +43,7 @@
     margin-left: 50px;
     margin-right: 10px;
 }
+/* tz list */
+.filter-tz li{
+    text-decoration: none;
+}

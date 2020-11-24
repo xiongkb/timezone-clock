@@ -6,7 +6,7 @@ const Navbar = (props) => {
     const setArrayTZnames = () => {
         return (
             <ul>
-                {props.filterList.map(name => <li>{name}</li>)}
+                {props.filterList.map(name => <li key={name}>{name}</li>)}
             </ul>
         );
     }
