@@ -3,7 +3,13 @@ import "./navbar.css";
 import logo from "./logo.png";
 
 const Navbar = (props) => {
-
+    const setArrayTZnames = () => {
+        return (
+            <ul>
+                {props.filterList.map(name => <li>{name}</li>)}
+            </ul>
+        );
+    }
     
     // rendering items
     return (
@@ -17,6 +23,7 @@ const Navbar = (props) => {
                 placeholder="ex: America/Los-Angeles" 
                 onChange={e => props.addTZ(e.target.value.toLocaleLowerCase())}>
             </input>
+            <div className="filter-tz">{setArrayTZnames()}</div>
             <button className="add-tz-btn">+</button>
             
         </div>

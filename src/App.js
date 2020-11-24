@@ -10,17 +10,20 @@ function App() {
   
   const tzList = moment.tz.names();
   const [timezones, setTimezones] = useState("");
+  const [filterNames, setFilterNames] = useState([]);
 
-  let filteredTZList = [];
-  console.log(tzList.filter(tz => tz.toLowerCase().includes(timezones.toLowerCase())))
-  // user input will be saved to timezones
+  
+  
+  
+  // user input will only pop up based on input
   useEffect(() => {
-    console.log(timezones);
+    const filterSearch = tzList.filter(tz => tz.toLowerCase().includes(timezones))
+    setFilterNames(timezones.length === 0 ? [] : filterSearch);
   }, [timezones]);
 
   return (
     <div className="App">
-      <Navbar addTZ={tz => setTimezones(tz)}/>
+      <Navbar addTZ={tz => setTimezones(tz)} filterList={filterNames}/>
       <Time />
       <Timezones timezones={timezones} />
     </div>
