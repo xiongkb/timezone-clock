@@ -22,6 +22,7 @@
 /* tz list */
 .filter-tz {
     margin-right: 50px;
+    float: right;
     height: 300px;
     width: 500px;
     overflow: scroll;
