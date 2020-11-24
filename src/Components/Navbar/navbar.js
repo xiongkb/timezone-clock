@@ -6,7 +6,8 @@ const Navbar = (props) => {
     const setArrayTZnames = () => {
         return (
             <ul>
-                {props.filterList.map(name => <li key={name}>{name}</li>)}
+                {props.filterList.map(name => <li className="tz-name"key={name}>{name}</li>)}
+                
             </ul>
         );
     }
@@ -18,15 +19,12 @@ const Navbar = (props) => {
                 <img src={logo} alt="Red Clock" className="clock-logo"></img>
                 <h1 className="app-title">Time Station</h1>
             </div>
-            <div className="search-parameter">
-                <input 
-                    className="search-bar" 
-                    placeholder="ex: America/Los-Angeles" 
-                    onChange={e => props.addTZ(e.target.value.toLocaleLowerCase())}>
-                </input>
-                <div className="filter-tz">{setArrayTZnames()}</div>
-            </div>
-            <button className="add-tz-btn">+</button>
+            <input 
+                className="search-bar" 
+                placeholder="ex: America/Los-Angeles" 
+                onChange={e => props.addTZ(e.target.value.toLocaleLowerCase())}>
+            </input>
+            <div className="filter-tz">{setArrayTZnames()}</div>
             
         </div>
     )

@@ -2,57 +2,38 @@
     border-bottom: #ccc 2px solid;
     width: 100%;
     height: 150px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.app-title {
-    display: inline-block;
-    width: 400px;
-}
-.add-tz-btn, .close-tz-btn {
-    display: inline-block;
-    border-radius: 50px;
-    width: 50px;
-    height: 50px;
-    font-size: 42px;
-    background: #fff;
-    color: #800000;
-    border: solid #800000 2px;
-    margin-right: 50px;
-    transform: rotate(0deg);
-    transition: transform 1s;
-}
-.add-tz-btn:hover {
-    cursor: pointer;
-}
-.add-tz-btn:focus, .close-tz-btn:focus {
-    outline: none;
-    box-shadow: 0 0 0 5px rgba(255, 69, 0, 0.4);
-}
-.close-tz-btn {
-    justify-content: space-around;
-}
-.search-bar {
-    margin-right: 10px;
-    width: 500px;
-    height: 30px;
+    position: fixed;
 }
 .clock-logo {
+    float: left;
     width: 80px;
     margin-left: 50px;
     margin-right: 10px;
 }
-.search-parameter {
-    overflow: hidden;
+.app-title {
+    float: left;
+    width: 400px;
+}
+.search-bar {
+    float: right;
+    margin-right: 10px;
+    width: 500px;
+    height: 30px;
 }
 /* tz list */
+.filter-tz {
+    height: 300px;
+    width: 500px;
+    overflow: scroll;
+}
 .filter-tz ul li{
     list-style-type: none;
     font-size: 18px;
     border: #ccc 1px solid;
     padding: 10px;
+    background-color: #fff;
 }
-.filter-tz {
-    overflow: hidden;
+.tz-name:hover {
+    box-shadow: 0 0 10px #ffa500;
+    border: solid 1px #ffa500;
 }
