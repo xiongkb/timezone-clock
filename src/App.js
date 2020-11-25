@@ -11,7 +11,7 @@ function App() {
   const tzList = moment.tz.names();
   const [timezones, setTimezones] = useState("");
   const [filterNames, setFilterNames] = useState([]);
-
+  const [existingTZ, setExistingTZ] = useState([]);
   
   
   
@@ -23,9 +23,14 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar addTZ={tz => setTimezones(tz)} filterList={filterNames}/>
+      <Navbar 
+        addToExistingTZ={tz => setExistingTZ([...existingTZ, tz])} 
+        addTZ={tz => setTimezones(tz)} 
+        filterList={filterNames}
+      />
       <Time />
-      <Timezones timezones={timezones} />
+      {existingTZ.map(tz => <Timezones tz={tz} timezones={timezones} />)}
+      
     </div>
   );
 }

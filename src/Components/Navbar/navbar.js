@@ -6,8 +6,10 @@ const Navbar = (props) => {
     const setArrayTZnames = () => {
         return (
             <ul>
-                {props.filterList.map(name => <li className="tz-name"key={name}>{name}</li>)}
-                
+                {props.filterList.map(name => <li 
+                    className="tz-name" 
+                    key={name} 
+                    onClick={() => props.addToExistingTZ(name)}>{name}</li>)}
             </ul>
         );
     }

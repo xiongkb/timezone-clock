@@ -5,7 +5,7 @@ import "./tz.css"
 const moment = require("moment-timezone");
 
 const Timezones = (props) => {
-
+    
     const [displayTZtime, setDisplayTZtime] = useState({
         tzCountry: 0,
         tzMajorCity: 0,
@@ -13,11 +13,12 @@ const Timezones = (props) => {
         tzYear: 0,
         tzHour: 0,
         tzMinute: 0,
-        tzSeconds: 0});
+        tzSeconds: 0
+    });
 
     // -------- running TZ time to be more dynamic --------
     function runTZtime() {
-        let timezone = moment().tz("America/Chicago");
+        let timezone = moment().tz(props.tz);
         let tzName = timezone._z.name;
         let splitName = tzName.split("/");
 
