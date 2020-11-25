@@ -3,6 +3,8 @@
     width: 100%;
     height: 150px;
     position: fixed;
+    top: 0;
+    background-color: #fff;
 }
 .clock-logo {
     float: left;
