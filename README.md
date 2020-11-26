@@ -1,8 +1,8 @@
-# Timezone Clocks
+# Timezone Station
 
-A clock that shows your current time/timezone based on your system time. You can add additional (IANA) timezone from all over the world to see their time.
 
-# Technology Used
+
+## Technology Used
 
 * MomentJS
 * ReactJS
