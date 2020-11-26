@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/timezone-station/static/css/main.4c56de43.chunk.css",
+    "main.js": "/timezone-station/static/js/main.009dfff7.chunk.js",
+    "main.js.map": "/timezone-station/static/js/main.009dfff7.chunk.js.map",
+    "runtime-main.js": "/timezone-station/static/js/runtime-main.39682199.js",
+    "runtime-main.js.map": "/timezone-station/static/js/runtime-main.39682199.js.map",
+    "static/js/2.c7f0f679.chunk.js": "/timezone-station/static/js/2.c7f0f679.chunk.js",
+    "static/js/2.c7f0f679.chunk.js.map": "/timezone-station/static/js/2.c7f0f679.chunk.js.map",
+    "index.html": "/timezone-station/index.html",
+    "static/css/main.4c56de43.chunk.css.map": "/timezone-station/static/css/main.4c56de43.chunk.css.map",
+    "static/js/2.c7f0f679.chunk.js.LICENSE.txt": "/timezone-station/static/js/2.c7f0f679.chunk.js.LICENSE.txt",
+    "static/media/logo.40a4848a.png": "/timezone-station/static/media/logo.40a4848a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.39682199.js",
+    "static/js/2.c7f0f679.chunk.js",
+    "static/css/main.4c56de43.chunk.css",
+    "static/js/main.009dfff7.chunk.js"
+  ]
+}
