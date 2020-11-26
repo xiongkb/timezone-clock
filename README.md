@@ -14,9 +14,8 @@ An app that can display other timezones in "time cards". Time cards are just a s
 
 By default, there is a time card that is always displayed onto the html, which is the user's local time based on their system time. User can find any timezone by typing into the search bar. Upon entering a letter, a list of existing timezones will be displayed. As they continue to add more letters/words, the list will be filtered to find the best match based on the input. When the timezone user is looking for has been found, user can click on the name. When the name is clicked, a time card will be created, displaying useful information. The time and date displayed in the time cards will dynamically update to the current time with the seconds running to show it's working.
 
-## Screenshots
+## Screenshot
 
-![image of default look](/public/defaultSS.png)
 ![image of demo look](/public/demoSS.png)
 
 ## Technology Used
